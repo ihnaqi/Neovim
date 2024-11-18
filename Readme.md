@@ -25,3 +25,5 @@ docker build -t neovim .
 ```bash
 docker run -it neovim
 ```
+
+<img src="Mickey_Mouse_Disney_1.jpeg" alt="Mickey Mouse" width="200" height="300"/>
