@@ -35,6 +35,13 @@ winget install BurntSushi.ripgrep.MSVC
 winget install fzf
 ```
 
+### Cloning
+> [!IMPORTANT]
+> Clone this repository to your `C:/Users/<username>/AppData/Local` directory.
+
+```bash
+git clone https://github.com/ihnaqi/Neovim.git nvim
+```
 ### Using Docker Instead
 You can build and run it using docker as well, just run the following commands.
 
