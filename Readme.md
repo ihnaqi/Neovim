@@ -1,6 +1,6 @@
 # Neovim Configuration
 
-This is my personal neovim configuration. It is a work in progress and will be updated as I tweek around cool stuffs in my journey towards the _vim land_.
+This is my personal neovim configuration. It has a long way to become a perfect configuration but it is good enough for me to work with. I have been using this configuration for a while now and I am pretty happy with it. I have tried to keep it as minimal as possible and also tried to keep it as simple as possible. I have used `Lua` as the primary language for configuration.
 
 ## Installation
 I am prettry sure if you are reading this you already know how to install neovim and also I don't think that I need to put emphasis on having a little or firm understanding of `Lua`.
