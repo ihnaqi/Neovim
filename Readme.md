@@ -11,9 +11,19 @@ I am prettry sure if you are reading this you already know how to install neovim
 Setting up some plugins when on _windows_ is not less than a nightmare, one such example is using `treesitter`. Just use `zig` instead of a `c/c++` compiler and you will know what I am talking about.
 
 ### Prerequisites
+- In order to make your code look better in the terminal you should have [Nerd-Fonts](https://www.nerdfonts.com/font-downloads) installed, I recommend [Intone Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/IntelOneMono.zip).
 - Make sure you have `NodeJs` installed on your system.
-- One of the plugin I use needs `bun.io` to be installed on your system. You can install it using `npm install -g bun.io`.
+    ```bash
+    winget install OpenJS.NodeJS.LTS
+    ```
+- One of the plugin I use needs `bun.io` to be installed on your system. You can install it using 
+    ```bash
+    npm install -g bun.io
+    ```
 - If you are on windows make sure to have `zig` installed on you PC.
+    ```bash
+    winget install -e --id zig.zig
+    ```
 
 #### Terminal Specifics
 You also need to have [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file) and [ripgrep](https://github.com/BurntSushi/ripgrep) installed on your system, if you don't have, run the following commands.
@@ -35,5 +45,9 @@ docker build -t neovim .
 ```bash
 docker run -it neovim
 ```
+
+### Terminal Background
+
+It feels better when I see this little guy in the background of my terminal. You can use the following image as your terminal background as well.
 
 ![](./Mickey_Mouse_Disney_1.jpeg)
