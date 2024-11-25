@@ -15,6 +15,16 @@ Setting up some plugins when on _windows_ is not less than a nightmare, one such
 - One of the plugin I use needs `bun.io` to be installed on your system. You can install it using `npm install -g bun.io`.
 - If you are on windows make sure to have `zig` installed on you PC.
 
+#### Terminal Specifics
+You also need to have [fzf](https://github.com/junegunn/fzf?tab=readme-ov-file) and [ripgrep](https://github.com/BurntSushi/ripgrep) installed on your system, if you don't have, run the following commands.
+```bash
+winget install BurntSushi.ripgrep.MSVC
+```
+
+```bash
+winget install fzf
+```
+
 ### Using Docker Instead
 You can build and run it using docker as well, just run the following commands.
 
@@ -26,4 +36,4 @@ docker build -t neovim .
 docker run -it neovim
 ```
 
-<img src="./Mickey_Mouse_Disney_1.jpeg" alt="Mickey Mouse" width="200" height="300">
+![](./Mickey_Mouse_Disney_1.jpeg)
