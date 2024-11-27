@@ -11,6 +11,10 @@ I am prettry sure if you are reading this you already know how to install neovim
 Setting up some plugins when on _windows_ is not less than a nightmare, one such example is using `treesitter`. Just use `zig` instead of a `c/c++` compiler and you will know what I am talking about.
 
 ### Prerequisites
+- Make sure you have `neovim` installed on your system.
+    ```bash
+    winget install Neovim.Neovim
+    ```
 - In order to make your code look better in the terminal you should have [Nerd-Fonts](https://www.nerdfonts.com/font-downloads) installed, I recommend [Intone Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/IntelOneMono.zip).
 - Make sure you have `NodeJs` installed on your system.
     ```bash
@@ -20,6 +24,10 @@ Setting up some plugins when on _windows_ is not less than a nightmare, one such
     ```bash
     npm install -g bun.io
     ```
+    - If the above command doesn't works, make sure you run the following command on **powershell**. 
+        ```bash
+        powershell -c "irm bun.sh/install.ps1 | iex"
+        ```
 - If you are on windows make sure to have `zig` installed on you PC.
     ```bash
     winget install -e --id zig.zig
