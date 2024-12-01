@@ -35,12 +35,6 @@ map("v", "<Down>", "<Nop>", opts)
 map("v", "<Left>", "<Nop>", opts)
 map("v", "<Right>", "<Nop>", opts)
 
--- Move between windows, by using Ctrl + Shift + h/j/k/l
-map("n", "<C-S-h>", "<C-w>h", opts)
-map("n", "<C-S-j>", "<C-w>j", opts)
-map("n", "<C-S-k>", "<C-w>k", opts)
-map("n", "<C-S-l>", "<C-w>l", opts)
-
 -- Resize windows using <leader> + Shift + h/j/k/l
 map("n", "<leader><S-h>", ":vertical resize -2<CR>", opts)
 map("n", "<leader><S-j>", ":resize +2<CR>", opts)
@@ -65,3 +59,48 @@ map("n", "<leader>ud", "zo", opts)
 -- Enable and Disable Copilot
 map("n", "<leader>ce", ":Copilot enable<CR>", opts)
 map("n", "<leader>cd", ":Copilot disable<CR>", opts)
+
+
+-- Removing characters witout saving them or register
+map("n", "x", '"_x', opts)
+
+-- Vertical scroll and center
+map("n", "<C-d", "<C-d>zz", opts)
+map("n", "<C-u", "<C-u>zz", opts)
+
+-- Find and center
+map("n", "n", "nzzzv", opts)
+map("n", "N", "Nzzzv", opts)
+
+-- Navigating between splits
+map("n", "<C-h>", ":wincmd h<CR>", opts)
+map("n", "<C-j>", ":wincmd j<CR>", opts)
+map("n", "<C-k>", ":wincmd k<CR>", opts)
+map("n", "<C-l>", ":wincmd l<CR>", opts)
+
+-- Centering the editor
+map("n", "<leader>cc", "Gzz", opts)
+
+-- Toogle line wrapping
+map("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
+
+-- Stay in indent mode (After indentation stay in visual mode don't need to come back to normal mode)
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)
+
+-- Don't need the over written block, I over wrote it because I don't need it, so no need to keep it in my register
+map("n", "p", '"_dP', opts)
+
+-- Setting up diagnostic keys
+-- map("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic message" })
+-- map("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next diagnostic message" })
+-- map("n", "<leader>d", vim.diagnostic.open_float, { desc = "Open floating diagnostic message" })
+-- map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic list" })
+
+-- Resize splits using arrow keys
+map("n", "<Up>", ":resize -2<CR>", opts)
+map("n", "<Left>", ":vertical resize -2<CR>", opts)
+map("n", "<Down>", ":reaize +2<CR>", opts)
+map("n", "<Right>", ":vertical resize +2<CR>", opts)
+
+

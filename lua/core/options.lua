@@ -1,6 +1,16 @@
 vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
 vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
 
+vim.opt.clipboard = "unnamedplus" -- turns clipboard sharing between os and vim on
+vim.opt.linebreak = true -- turns line break on
+vim.opt.mouse = "a"
+vim.opt.autoindent = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
+vim.opt.softtabstop = 3
+vim.opt.swapfile = false -- I don't need swap files, they alway haunt me
+vim.opt.laststatus = 3
+
 vim.opt.nu = true
 vim.opt.rnu = true
 vim.opt.expandtab = true
