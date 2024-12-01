@@ -1,39 +1,34 @@
 return {
    "nvim-treesitter/nvim-treesitter",
    build = ":TSUpdate",
-   opts = {
-      ensure_installed = {
-         "bash",
-         "css",
-         "html",
-         "java",
-         "javascript",
-         "json",
-         "lua",
-         "markdown",
-         "rust",
-         "typescript",
-      },
-      highlight = {
-         enable = true,
-      },
-
-      incremental_selection = {
-         enable = true,
-         keymaps = {
-            init_selection = "gnn",
-            node_incremental = "grn",
-            scope_incremental = "grc",
-            node_decremental = "grm",
+   config = function()
+      local opts = {
+         ensure_install = {
+            "rust",
+            "ts_ls",
+            "bash",
+            "javascript",
+            "java",
+            "typescript",
+            "lua",
+            "json",
+            "tsx",
+            "css",
+            "html",
+            "dockerfile",
+            "markdown",
+            "markdown_inline",
+            "gitignore",
+            "yaml"
          },
-      },
-      indent = {
-         enable = true,
-      },
-   },
-   config = function(_, opts)
-      require "nvim-treesitter.install".prefer_git = false
-      require "nvim-treesitter.install".compilers = { "zig" }
-      require("nvim-treesitter.configs").setup(opts)
-   end,
+         highligt = {
+            enable = true
+         },
+         auto_install = true,
+         indent =  { enable = true }
+      }
+      -- require("nvim-treesitter.install").prefer_git = false
+    require("nvim-treesitter.install").compilers = { "zig" }
+    require("nvim-treesitter.configs").setup(opts)
+   end
 }

@@ -6,7 +6,6 @@ return {
    config = function()
       require("telescope").setup({
          defaults = {
-            -- I want the prompt_prefix to be a solid arrows head pointing towards the right
             prompt_prefix = "▶ ",
             sorting_strategy = "descending",
             layout_strategy = "horizontal",
