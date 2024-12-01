@@ -27,7 +27,7 @@ require("lazy").setup({
    require("plugins.treesitter"),
    require("plugins.gitsigns"),
    require("plugins.nvimtree"),
-   require("plugins.autopair"),
+   require("plugins.misc"),
    require("plugins.indent-blankline"),
    require("plugins.noice"),
    require("plugins.undotree"),
