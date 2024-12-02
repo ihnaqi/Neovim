@@ -44,9 +44,8 @@ return {
                      ['!'] = 'red',
                      t = 'red',
                   }
-                  -- Set the background color of the filename and ensure the separator blends with lualine_x
                   vim.api.nvim_command('hi! LualineFilename guibg=' .. mode_color[mode])
-                  vim.api.nvim_command('hi! LualineSeparator guibg=' .. '#282c34' .. ' guifg=' .. mode_color[mode]) -- Set guibg to match lualine_x background
+                  vim.api.nvim_command('hi! LualineSeparator guibg=' .. '#%06x' .. vim.api.nvim_get_hl(0, { name = "lualine_x_normal" }).bg .. ' guifg=' .. mode_color[mode]) -- Set guibg to match lualine_x background
 
                   return "%#LualineFilename#" .. vim.fn.expand('%:t') .. ' ' .. "%#LualineSeparator#"
                end
