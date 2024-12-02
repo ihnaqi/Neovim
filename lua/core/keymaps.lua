@@ -100,7 +100,10 @@ map("n", "p", '"_dP', opts)
 -- Resize splits using arrow keys
 map("n", "<Up>", ":resize -2<CR>", opts)
 map("n", "<Left>", ":vertical resize -2<CR>", opts)
-map("n", "<Down>", ":reaize +2<CR>", opts)
+map("n", "<Down>", ":resize +2<CR>", opts)
 map("n", "<Right>", ":vertical resize +2<CR>", opts)
 
+-- Moving line/s above an below using Alt-j and Alt-k
+vim.keymap.set({"n", "v"}, "<Alt-k>", "<cmd>m -2<CR>", opts)
+vim.keymap.set({"n", "v"}, "<Alt-j>", "<cmd>m +1<CR>", opts)
 
