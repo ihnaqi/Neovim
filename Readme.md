@@ -70,4 +70,5 @@ docker run -it neovim
 ### Terminal Background
 
 It feels better when I see this little guy in the background of my terminal. You can use the following image as your terminal background as well.
-![](./Mickey_Mouse_Disney_1.jpeg)
+
+![Mickey<3](Mickey_Mouse_Disney_1.jpeg)
