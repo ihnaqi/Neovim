@@ -2,33 +2,28 @@ return {
    "nvim-treesitter/nvim-treesitter",
    build = ":TSUpdate",
    config = function()
-      local opts = {
-         ensure_install = {
-            "rust",
-            "ts_ls",
-            "bash",
-            "javascript",
-            "java",
-            "typescript",
+      require("nvim-treesitter.install").compilers = { "zig" }
+
+      require("nvim-treesitter.configs").setup({
+         modules = {},
+         sync_install = false,
+         ensure_installed = {
             "lua",
-            "json",
+            "javascript",
+            "typescript",
             "tsx",
-            "css",
-            "html",
-            "dockerfile",
-            "markdown",
-            "markdown_inline",
-            "gitignore",
-            "yaml"
+            "rust",
+            "vim",
+            "vimdoc",
          },
-         highligt = {
-            enable = true
+         highlight = {
+            enable = true,
          },
          auto_install = true,
-         indent =  { enable = true }
-      }
-      -- require("nvim-treesitter.install").prefer_git = false
-    require("nvim-treesitter.install").compilers = { "zig" }
-    require("nvim-treesitter.configs").setup(opts)
-   end
+         ignore_install = { "latex" },
+         indent = {
+            enable = true,
+         },
+      })
+   end,
 }

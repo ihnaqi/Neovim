@@ -1,8 +1,5 @@
-vim.cmd([[hi NvimTreeNormal guibg=NONE ctermbg=NONE]])
-vim.cmd([[hi NvimTreeNormalNC guibg=NONE ctermbg=NONE]])
-
 vim.opt.clipboard = "unnamedplus" -- turns clipboard sharing between os and vim on
-vim.opt.linebreak = true -- turns line break on
+vim.opt.linebreak = true          -- turns line break on
 vim.opt.mouse = "a"
 vim.opt.autoindent = true
 vim.opt.ignorecase = true
@@ -26,7 +23,7 @@ vim.opt.showmode = false
 vim.opt.wrap = false
 
 -- Disable highing of search
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 
 -- Disable Ctrl-v paste
 vim.opt.paste = false
@@ -35,6 +32,19 @@ vim.opt.paste = false
 vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
 -- Help me write configuration for better navigation using hjkl keys in wrapped mode
+vim.cmd([[noremap j gj]])
+vim.cmd([[noremap k gk]])
+vim.cmd([[noremap $ g$]])
+vim.cmd([[noremap ^ g^]])
+vim.cmd([[noremap _ g_]])
+
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'FloatBorder', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'Pmenu', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'EndOfBuffer', { bg = 'none' })
+
+-- Enabling movement with g, h, k, l in wrap mode as well
 vim.cmd([[noremap j gj]])
 vim.cmd([[noremap k gk]])
 vim.cmd([[noremap $ g$]])

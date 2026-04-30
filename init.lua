@@ -1,48 +1,21 @@
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
+-- local info = debug.getinfo(1, "S")
+-- local script_path = info.source:sub(2)
+-- print(script_path)
+-- local dirname = script_path:match("(.*\\)")
+-- print(dirname)
+-- local filename = script_path:match("([^\\]+)$")
+-- print(filename)
 
--- Loading Custom Keymaps and Options
 require("core.keymaps")
 require("core.options")
 
-require("lazy").setup({
-    require("plugins.colorscheme"),
-    require("plugins.telescope"),
-    require("plugins.copilot"),
-    require("plugins.lualine"),
-    require("plugins.treesitter"),
-    require("plugins.gitsigns"),
-    require("plugins.nvimtree"),
-    require("plugins.misc"),
-    require("plugins.indent-blankline"),
-    require("plugins.noice"),
-    require("plugins.undotree"),
-    -- Need to add DAP for node, java, azure, typescrpit
-    -- require("plugins.debug"),
-    require("plugins.markdown"),
-    require("plugins.harpoon"),
-    require("plugins.lsp"),
-    require("plugins.autocomplete"),
-    require("plugins.autoformat")
-})
+-- Adding Lazy as package manager
+require("config.lazy")
+require("config.lsp")
 
+-- Attaching Auto commands, LSP stuffs
+require("core.autocmd")
 
--- local signs = { Error = "", Warn = "", Info = "", Hint = "" }
-local signs = { Error = "", Warn = "", Hint = "󰌵", Info = "" }
-for type, icon in pairs(signs) do
-   local hl = "DiagnosticSign" .. type
-   vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
-end
+-- vim.g.vimtex_compiler_latexmk_engines = {
+--    _ = 'lualatex'
+-- }
