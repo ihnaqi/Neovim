@@ -28,6 +28,9 @@ vim.opt.hlsearch = true
 -- Disable Ctrl-v paste
 vim.opt.paste = false
 
+-- Smooth scroll
+vim.opt.scrolloff = 2
+
 -- Make my cursor blinking, on insert mode it will be a line, on normal mode it will be a block and block on command and visual mode
 vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25,r-cr:hor20,o:hor50"
 
